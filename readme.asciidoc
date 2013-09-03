@@ -1,0 +1,16 @@
+Readme
+======
+:Author: S.N. ten Hoeve
+:Date: Sept 3, 2013
+
+Background
+----------
+While sitting on the terrace and enjoying some cold drinks with colleague Joost we discussed some domain modelling. The main discussion was about avoiding null's in the domain layer and shifted towards the null object pattern to implement this. This demo code shows how behavior can be executed on both, the *User* and *UnknownUser* object which ensures that null's are avoided and the null object, *UnknownUser* in this case, is being utilized.
+
+Using null is discouraged as it usually reduces usage of a well defined contract. Semantically it is also incorrect to use null for this and in practice null checks are needed everywhere simply because there is uncertainty. 
+
+Howto
+-----
+Clone or fork this repository and make sure you have http://maven.apache.org[Apache Maven] and Java installed.
+
+Now move into the root directory and run `mvn clean verify` to run all unit tests. The main implementation code is in the `src/main/java` directory whereas the tests can be found under `src/test/java` like in all Maven projects.
